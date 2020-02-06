@@ -47,12 +47,11 @@ function Line() {
 }
 
 function Poly() {
-    // let points = [];
-    // for (let i = 0; i < 4; i++) {
-    //   points.push(r(1, 100) + "," + r(1, 100));
-    // }
-    // points = points.join(" ");
-  let points = new Array(4).map(() => {return r(1, 100) + "," + r(1, 100)}).join(" ");
+  let points = [];
+  for (let i = 0; i < 4; i++) {
+    points.push(r(1, 100) + "," + r(1, 100));
+  }
+  points = points.join(" ");
   let colour = rColour();
   return `<polygon points="${points}" fill="${colour}" />`;
 }
